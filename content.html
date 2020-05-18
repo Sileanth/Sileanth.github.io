@@ -47,6 +47,9 @@
     .draggable-item.red {
         background-color: #f24726;
     }
+	.krzeslo {
+		display: inline;
+	}
 
     .draggable-item.green {
         background-color: #0ca788;
@@ -61,12 +64,16 @@
 
 </style>
 <body>
-<button>xd</button>
+<button  onclick="obrazy()">xd</button>
 <div id="container">
-	<button>ok</button>
 </div>
 <script>
-
+	function obrazy() {
+		var x = document.getElementsByClassName("krzeslo");
+		for (var i = 0; i < x.length; i++) {
+        	x[i].style.display = "none";
+    	}
+	}
 	const images = [
 		{src: 'img/Asset_1.svg', width: 267.02, height: 218.31},
 		{src: 'img/Asset_11.svg', width: 204.36, height: 375.54},
