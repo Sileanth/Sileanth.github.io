@@ -46,12 +46,14 @@
 
     .draggable-item.red {
         background-color: #f24726;
-		display:none;
     }
 
     .draggable-item.green {
         background-color: #0ca788;
     }
+	.krzeslo {
+		display:none;
+	}
 
     .image-box img {
         max-width: 112px;
@@ -123,7 +125,7 @@
 	}
 
 	function addShapes(container) {
-		container.innerHTML += '<div class="shape draggable-item green" data-color="0ca788">I am shape</div>' +
+		container.innerHTML += '<div class="shape draggable-item green krzeslo" data-color="0ca788">I am shape</div>' +
 			'<div class="shape draggable-item red" data-color="f24726">Me too</div>'
 	}
 
