@@ -47,9 +47,6 @@
     .draggable-item.red {
         background-color: #f24726;
     }
-	.krzeslo {
-		display: inline;
-	}
 
     .draggable-item.green {
         background-color: #0ca788;
@@ -64,12 +61,40 @@
 
 </style>
 <body>
-<button  onclick="obrazy()">xd</button>
+<button  onclick="hide_krzesla()">Krzesla</button>
+<button  onclick="hide_szafki()">Szafki</button>
+<button  onclick="hide_lampy()">Lampy</button>
 <div id="container">
 </div>
 <script>
-	function obrazy() {
+	function hide_krzesla() {
 		var x = document.getElementsByClassName("krzeslo");
+		if(x[0].style.display === "none") {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "inline";
+			}
+		}
+		else {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+		}
+	}
+	function hide_szafki() {
+		var x = document.getElementsByClassName("szafka");
+		if(x[0].style.display === "none") {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "inline";
+			}
+		}
+		else {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+		}
+	}
+	function hide_lampy() {
+		var x = document.getElementsByClassName("lampa");
 		if(x[0].style.display === "none") {
 			for (var i = 0; i < x.length; i++) {
 				x[i].style.display = "inline";
@@ -140,7 +165,7 @@
 
 	function addShapes(container) {
 		container.innerHTML += '<div class="shape draggable-item green" data-color="0ca788">I am shape</div>' +
-			'<div class="shape draggable-item red" data-color="f24726 krzeslo">Me too</div>'
+			'<div class="shape draggable-item red" data-color="f24726">Me too</div>'
 	}
 
 	function addImages(container) {
