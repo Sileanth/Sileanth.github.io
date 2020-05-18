@@ -133,13 +133,13 @@
 	]
 
 	function getImage(img) {
-		return `<div class="draggable-item image-box">
+		return `<div class="draggable-item image-box krzeslo">
 		        <img src="${img.src}" data-image-url="https://realtimeboard.com/api/awesome-plugins/plugins/rtb_sticker_pack/${img.src}">
 		        </div>`
 	}
 
 	function addShapes(container) {
-		container.innerHTML += '<div class="shape draggable-item green krzeslo" data-color="0ca788">I am shape</div>' +
+		container.innerHTML += '<div class="shape draggable-item green" data-color="0ca788">I am shape</div>' +
 			'<div class="shape draggable-item red" data-color="f24726">Me too</div>'
 	}
 
