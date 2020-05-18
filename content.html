@@ -70,9 +70,16 @@
 <script>
 	function obrazy() {
 		var x = document.getElementsByClassName("krzeslo");
-		for (var i = 0; i < x.length; i++) {
-        	x[i].style.display = "none";
-    	}
+		if(x[0].style.display == "inline") {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+		}
+		else {
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "inline";
+			}
+		}
 	}
 	const images = [
 		{src: 'img/Asset_1.svg', width: 267.02, height: 218.31},
