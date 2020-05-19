@@ -12,15 +12,15 @@
         padding: 0;
     }
 	.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
     #container {
         height: 100%;
         overflow-y: auto;
@@ -32,7 +32,11 @@
         padding-top: 32px;
         box-sizing: border-box;
     }
-
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
     .row {
         display: flex;
         flex-direction: row;
@@ -70,9 +74,11 @@
 
 </style>
 <body>
-<button  onclick="hide_krzesla()" class="button">Krzesla</button>
-<button  onclick="hide_szafki()" class="button">Szafki</button>
-<button  onclick="hide_lampy()" class="button">Lampy</button>
+	<ul>
+<li><button  onclick="hide_krzesla()" class="button">Krzesla</button></li>
+<li><button  onclick="hide_szafki()" class="button">Szafki</button></li>
+<li><button  onclick="hide_lampy()" class="button">Lampy</button></li>
+	</ul>
 <div id="container">
 </div>
 <script>
