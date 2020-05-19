@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
+</head>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #container {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 32px;
+        box-sizing: border-box;
+    }
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li  {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  float: left;
+}
+
+li:hover {
+  background-color: #111;
+}
+    .row {
+        display: flex;
+        flex-direction: row;
+        padding-left: 32px;
+        margin-bottom: 32px;
+    }
+
+    .draggable-item {
+        margin-left: 32px;
+        margin-bottom: 32px;
+        width: 112px;
+        height: 112px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+
+    .draggable-item.red {
+        background-color: #f24726;
+    }
+
+    .draggable-item.green {
+        background-color: #0ca788;
+    }
+
+
+    .image-box img {
+        max-width: 112px;
+        max-height: 112px;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+	<ul>

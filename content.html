@@ -43,6 +43,9 @@ li  {
 li:hover {
   background-color: #111;
 }
+.active {
+  background-color: #4CAF50;
+}
     .row {
         display: flex;
         flex-direction: row;
@@ -81,9 +84,9 @@ li:hover {
 </style>
 <body>
 	<ul>
-<li onclick="hide_krzesla()" >Krzesla</li>
-<li onclick="hide_szafki()" >Szafki</li>
-<li onclick="hide_lampy()" >Lampy</li>
+<li class="menu active" onclick="hide_krzesla()" >Krzesla</li>
+<li class="menu" onclick="hide_szafki()" >Szafki</li>
+<li class="menu" onclick="hide_lampy()" >Lampy</li>
 <li>jkjk</li>
 <li>jkjk</li>
 <li>jkjk</li>
@@ -92,6 +95,12 @@ li:hover {
 <div id="container">
 </div>
 <script>
+	function hide_elements() {
+		var x = document.getElementsByClassName("element");
+		for(var i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+	}
 	function hide_krzesla() {
 		var x = document.getElementsByClassName("krzeslo");
 		if(x[0].style.display === "none") {
