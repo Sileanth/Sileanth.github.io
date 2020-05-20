@@ -6,8 +6,18 @@ function run() {
 			bottomBar: {
 				title: 'Dropper',
 				svgIcon: icon24,
-				onClick: () => {
-					miro.board.ui.openLibrary('content.html', {title: 'Dropper'})
+				onClick: async () => {
+					const authorized = await miro.isAuthorized()
+					if (authorized) {
+						miro.board.ui.openLibrary('content.html', {title: 'Dropper'})
+					} else {
+						miro.board.ui.openModal('not-authorized.html')
+							.then(res => {
+								if (res === 'success') {
+									miro.board.ui.openLibrary('content.html', {title: 'Dropper'})
+								}
+							})
+					}
 				}
 			},
 			getWidgetMenuItems: (widgets) => {
