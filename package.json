@@ -1,5 +1,5 @@
 {
-  "name": "astro-blog",
+  "name": "sleepy-star",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "astro": "^3.6.4",
-    "typescript": "^5.3.2"
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.0.8",
+    "typescript": "^5.3.3"
   }
 }
