@@ -13,6 +13,8 @@
     	devShells.x86_64-linux.default = pkgs.mkShell {
       packages = with pkgs; [
         nodejs
+        nodePackages.typescript-language-server
+        jetbrains.webstorm
       ] ;
 
     };
